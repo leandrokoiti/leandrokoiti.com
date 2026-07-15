@@ -1,18 +1,180 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width,height=device-height" />
-    <title>Leandro Koiti Oguro</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./content/index.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="card">
-      <h1><span>Leandro Koiti Oguro</span> <small>Full Stack Developer | Software Architect</small></h1>
-      <h4>Campo Grande, MS, Brazil</h4>
-      <ul id="portfolio">
-        <li><i class="glyphicon glyphicon-link"></i> <a href="https://www.linkedin.com/in/leandrokoiti">my linkedin profile</a></li>
-      </ul>
-    </div>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leandro Koiti Oguro</title>
+  <meta name="description" content="Leandro Koiti Oguro — Engineering Director and Principal Software Engineer. Campo Grande, MS, Brazil." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Leandro Koiti Oguro" />
+  <meta property="og:description" content="Engineering Director · Principal Software Engineer. Campo Grande, MS, Brazil." />
+  <meta property="og:url" content="https://leandrokoiti.com" />
+
+  <style>
+    :root {
+      --ground: #FAFAF8;
+      --text:   #17171A;
+      --muted:  #5C5C64;
+      --rule:   #E2E1DC;
+      --accent: #24408E;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ground: #121316;
+        --text:   #EDEDEA;
+        --muted:  #9B9BA3;
+        --rule:   #2A2C31;
+        --accent: #93B0FF;
+      }
+    }
+    :root[data-theme="light"] {
+      --ground: #FAFAF8; --text: #17171A; --muted: #5C5C64; --rule: #E2E1DC; --accent: #24408E;
+    }
+    :root[data-theme="dark"] {
+      --ground: #121316; --text: #EDEDEA; --muted: #9B9BA3; --rule: #2A2C31; --accent: #93B0FF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--ground);
+      color: var(--text);
+      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100svh;
+      padding: 18vh clamp(24px, 8vw, 96px) 8vh;
+    }
+
+    .sheet {
+      max-width: 38ch;
+      position: relative;
+    }
+
+    .rule-top {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6.5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      text-wrap: balance;
+    }
+
+    .role {
+      font-style: italic;
+      font-size: 1.0625rem;
+      color: var(--muted);
+      margin-top: 16px;
+    }
+
+    /* Portuguese line as a margin note on wide screens */
+    .pt {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-top: 32px;
+      max-width: 30ch;
+    }
+    @media (min-width: 900px) {
+      .pt {
+        position: absolute;
+        top: 0;
+        left: -20ch;
+        width: 17ch;
+        margin-top: 0;
+        text-align: right;
+      }
+    }
+
+    .marks {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 0.9375rem;
+    }
+    .marks sup a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.72em;
+      padding: 0 0.15em;
+    }
+    .marks sup a:hover { text-decoration: underline; }
+
+    .notes {
+      margin-top: 56px;
+      padding-top: 18px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.8125rem;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+    .notes li {
+      list-style: none;
+      display: flex;
+      gap: 0.9ch;
+    }
+    .notes .n {
+      color: var(--accent);
+      flex: none;
+      font-variant-numeric: lining-nums;
+    }
+    .notes a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      word-break: break-word;
+    }
+    .notes a:hover { color: var(--accent); }
+
+    .colophon {
+      margin-top: 40px;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      font-variant-numeric: oldstyle-nums;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <hr class="rule-top" />
+
+    <h1>Leandro Koiti Oguro</h1>
+
+    <p class="role">Engineering Director &nbsp;·&nbsp; Principal&nbsp;Software&nbsp;Engineer</p>
+
+    <p class="pt" lang="pt-BR">Engenheiro de software brasileiro, baseado em Campo Grande, MS.</p>
+
+    <p class="marks">
+      Writing software since 2004; leading the people who write it since 2020.
+      Reachable by mail<sup><a href="#n1" aria-label="Footnote 1: email">1</a></sup>,
+      or found at work<sup><a href="#n2" aria-label="Footnote 2: LinkedIn">2</a></sup><sup><a href="#n3" aria-label="Footnote 3: GitHub">3</a></sup>.
+    </p>
+
+    <ul class="notes">
+      <li id="n1"><span class="n">1.</span> <a href="mailto:contato@leandrokoiti.com">contato@leandrokoiti.com</a></li>
+      <li id="n2"><span class="n">2.</span> <a href="https://www.linkedin.com/in/leandrokoiti" rel="me noopener">linkedin.com/in/leandrokoiti</a></li>
+      <li id="n3"><span class="n">3.</span> <a href="https://github.com/leandrokoiti" rel="me noopener">github.com/leandrokoiti</a></li>
+    </ul>
+
+    <p class="colophon">Campo Grande, MS · Brasil · <span id="yr">2026</span></p>
+  </main>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
 </html>
