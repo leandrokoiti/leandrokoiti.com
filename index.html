@@ -87,6 +87,13 @@
       max-width: 30ch;
     }
     @media (min-width: 900px) {
+      /* Recto-page composition: the growing left margin is both the room the
+         margin note needs (its -20ch ≈ 132px overhang exceeded the old 96px
+         padding cap, clipping it) and what keeps the column from stranding
+         flush-left on wide screens. */
+      body {
+        padding-left: clamp(11rem, 30vw, 34rem);
+      }
       .pt {
         position: absolute;
         top: 0;
